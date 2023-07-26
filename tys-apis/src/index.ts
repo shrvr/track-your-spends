@@ -1,21 +1,19 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
+import express from 'express';
+import mongoose from 'mongoose';
+import config from './config';
 
 const app = express();
-const port = 8080;
-
-dotenv.config();
+const port = 5000;
 
 mongoose
-  .connect(`${process.env.MONGO_URL}`)
-  .then(() => console.log("DB Conncetion Successful !!"))
+  .connect(`${config.MONGO_URL}`)
+  .then(() => console.log('DB Conncetion Successful !!'))
   .catch((err) => {
     console.log(err);
   });
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {

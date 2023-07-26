@@ -39,3 +39,5 @@ node_modules
 *.sublime-project
 *.sublime-workspace
 
+.vscode
+tys-webapp/.vscode
