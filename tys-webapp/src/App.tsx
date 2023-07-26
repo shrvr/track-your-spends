@@ -1,7 +1,6 @@
-import "./App.scss";
+import type { FC } from 'react';
+import './App.scss';
 
-function App() {
-  return <div>TrackYourSpends</div>;
-}
+const App: FC = () => <div>TrackYourSpends</div>;
 
 export default App;

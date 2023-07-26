@@ -1,0 +1,8 @@
+{
+  "tys-webapp/**/*.{ts,tsx}": ["npm --prefix ./tys-webapp run lint:fix"],
+  "tys-webapp/**/*.{js,css,md,html,json}": [
+    "npm --prefix ./tys-webapp run format"
+  ],
+  "tys-apis/**/*.{ts,tsx}": ["npm --prefix ./tys-apis run lint:fix"],
+  "tys-apis/**/*.{js,css,md,html,json}": ["npm --prefix ./tys-apis run format"]
+}

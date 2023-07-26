@@ -1,0 +1,49 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:node/recommended",
+    "prettier"
+  ],
+  "plugins": ["node", "import", "@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "node/no-unsupported-features/es-syntax": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-console": "off",
+    "global-require": "warn",
+    "import/no-dynamic-require": "error",
+    "no-process-env": "warn",
+    "node/no-unpublished-require": "error",
+    "node/no-extraneous-require": "error",
+    "node/no-missing-require": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"],
+        "tsconfigRootDir": ".",
+        "sourceType": "module"
+      }
+    },
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "node/no-missing-import": "off"
+      }
+    }
+  ]
+}
