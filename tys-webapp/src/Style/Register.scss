@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-form {
+  width: 500px;
+  height: fit-content;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.register-form .form-group {
+  margin-bottom: 20px;
+}
+
+.register-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form .form-group .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.register-form .submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.register-form .login-link {
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}
