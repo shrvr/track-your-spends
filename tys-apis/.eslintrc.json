@@ -10,7 +10,7 @@
     "plugin:node/recommended",
     "prettier"
   ],
-  "plugins": ["node", "import", "@typescript-eslint", "prettier"],
+  "plugins": ["node", "import", "@typescript-eslint", "unused-imports", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -20,19 +20,59 @@
     "prettier/prettier": "error",
     "node/no-unsupported-features/es-syntax": "off",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "no-console": "off",
     "global-require": "warn",
+    "unused-imports/no-unused-imports": "error",
     "import/no-dynamic-require": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" }
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["../"]
+      }
+    ],
+    "import/no-relative-parent-imports": "off",
+    "import/no-named-as-default-member": "off",
     "no-process-env": "warn",
     "node/no-unpublished-require": "error",
     "node/no-extraneous-require": "error",
-    "node/no-missing-require": "error"
+    "node/no-missing-require": "error",
+    "max-len": ["warn", { "code": 100 }]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "paths": ["src"]
+      }
+    }
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts"],
       "parserOptions": {
         "project": ["./tsconfig.json"],
         "tsconfigRootDir": ".",
@@ -40,7 +80,7 @@
       }
     },
     {
-      "files": ["**/*.ts", "**/*.tsx"],
+      "files": ["**/*.ts"],
       "rules": {
         "node/no-missing-import": "off"
       }
