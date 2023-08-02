@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import './App.scss';
-import Register from 'src/Components/Register';
+import Register from './Components/Register';
 
 const App: FC = () => (
   <div>

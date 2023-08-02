@@ -23,6 +23,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "unused-imports", "import", "prettier"],
   "rules": {
+    "import/no-named-as-default": "warn",
     "no-use-before-define": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",

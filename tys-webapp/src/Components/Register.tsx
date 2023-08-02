@@ -3,8 +3,9 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
-import InputField from 'src/Components/InputField';
 import SelectField from 'src/Components/SelectField';
+
+import InputField from './InputField';
 import 'src/Style/Register.scss';
 
 const professions = ['Engineer', 'Doctor', 'Artist', 'Student', 'Other'];
