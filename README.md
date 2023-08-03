@@ -13,13 +13,22 @@
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/-Redux-764abc?style=for-the-badge&labelColor=black&logo=redux&logoColor=764abc" alt="Redux Badge">
+    <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Badge">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/-NodeJS-3C873A?style=for-the-badge&labelColor=black&logo=Node.JS&logoColor=3C873A" alt="NodeJS Badge">
+    <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass Badge">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/-MongoDB-419732?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=419732" alt="MongoDB Badge">
+    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS Badge">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Badge">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=white" alt="MongoDB Badge">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="MongoDB Badge">
   </a>
 </p>
 <br><br/>
