@@ -1,0 +1,14 @@
+{
+  "preset": "ts-jest",
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"],
+  "testEnvironment": "node",
+  "roots": ["./"],
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts?$",
+  "moduleFileExtensions": ["ts", "tsx", "js", "node"],
+  "moduleNameMapper": {
+    "^src/(.*)$": "<rootDir>/src/$1"
+  }
+}

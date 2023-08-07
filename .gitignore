@@ -26,6 +26,9 @@ coverage
 
 # Dependency directory
 node_modules
+build
+dist
+
 
 # Output files
 *.out

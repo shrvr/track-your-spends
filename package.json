@@ -4,7 +4,7 @@
   "description": "TrackYourSpends - Your Personal Expense Tracker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-backend": "npm --prefix ./tys-apis run test",
     "format-webapp": "npm --prefix ./tys-webapp run format",
     "format-backend": "npm --prefix ./tys-apis run format",
     "lint-webapp": "npm --prefix ./tys-webapp run lint",

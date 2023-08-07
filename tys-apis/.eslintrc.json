@@ -1,4 +1,5 @@
 {
+  "env": { "node": true, "jest": true },
   "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
@@ -10,7 +11,7 @@
     "plugin:node/recommended",
     "prettier"
   ],
-  "plugins": ["node", "import", "@typescript-eslint", "unused-imports", "prettier"],
+  "plugins": ["node", "import", "@typescript-eslint", "jest", "unused-imports", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -60,7 +61,12 @@
     "node/no-unpublished-require": "error",
     "node/no-extraneous-require": "error",
     "node/no-missing-require": "error",
-    "max-len": ["warn", { "code": 100 }]
+    "max-len": ["warn", { "code": 100 }],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
   },
   "settings": {
     "import/resolver": {
@@ -83,6 +89,12 @@
       "files": ["**/*.ts"],
       "rules": {
         "node/no-missing-import": "off"
+      }
+    },
+    {
+      "files": ["**/*.test.ts", "**/*.spec.ts", "./*.setup.ts"],
+      "rules": {
+        "node/no-unpublished-import": "off"
       }
     }
   ]
