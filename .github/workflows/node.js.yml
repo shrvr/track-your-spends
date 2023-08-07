@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -27,22 +26,25 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install Frontend Dependencies
         run: cd tys-webapp && npm install
 
       - name: Perform Code Formatting Check on Frontend
         run: npm run format-webapp
-        
+
       - name: Perform Linting Check on Frontend
         run: npm run lint-webapp
-        
+
       - name: Install Backend Dependencies
         run: cd tys-apis && npm install
-        
+
       - name: Perform Code Formatting Check on Backend
         run: npm run format-backend
-      
+
       - name: Perform Linting Check on Backend
         run: npm run lint-backend
+
+      - name: Perform Tests on Backend
+        run: npm run test-backend
