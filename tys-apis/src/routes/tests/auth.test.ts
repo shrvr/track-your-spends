@@ -14,7 +14,7 @@ jest.mock('src/models/User', () => ({
 }));
 
 describe('POST /api/auth/register', () => {
-  it('should create a new user and return their id', async () => {
+  it('should create a new user and return data', async () => {
     const newUser = {
       first_name: 'John',
       last_name: 'Doe',
@@ -25,12 +25,18 @@ describe('POST /api/auth/register', () => {
     };
 
     // Resetting the mock implementation for this test case
-    saveMock.mockResolvedValue({ _id: 'random12345' });
-
+    saveMock.mockResolvedValue({
+      _id: 'random12345',
+      email: 'john.doe@example.com',
+    });
     const response = await request(app).post('/api/auth/register').send(newUser);
 
     expect(response.statusCode).toBe(201);
-    expect(response.body).toBe('random12345');
+    expect(response.body).toEqual({
+      message: 'Registration Successful',
+      _id: 'random12345',
+      email: 'john.doe@example.com',
+    });
 
     // Assert that the User model's save method was called with the right arguments
     expect(saveMock).toHaveBeenCalled();
