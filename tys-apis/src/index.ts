@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 
@@ -16,6 +17,7 @@ if (config.NODE_ENV !== 'test') {
     });
 }
 
+app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoute);
 
